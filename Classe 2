@@ -1,0 +1,217 @@
+//classe 2//
+
+// Per afegir noms a la llista//
+
+llista = ["jaume", "carme"]
+llista2= ["raquel", "maria"]
+
+llista.append(llista2)
+print(llista)
+
+imprimir llista
+llista_noms= ["carme", "Joan"]
+
+for nom in llista_noms:
+    print(nom)
+
+//per imprimir un dels noms de la llista
+
+for nom in llista_noms:
+    if nom == "joan":
+        print(nom)
+        
+//
+llista_noms =["carme", "Joan"]
+
+for nom in llista_noms:
+    if nom == "joan":
+        print(nom)
+    else:
+        print(nom + "no es en joan")
+        
+//elif
+        
+  numeros =[1,2,3,6,7,8,10,15]
+
+for n in numeros:
+    if n < 6:
+        print(f"{n} es menor que 6")
+    elif n == 6:
+        print(f"{n}es igual que 6")
+    else:
+        print(f"{n} es major que 6")
+
+//funcions natives de python
+//imprimir nums llista
+
+numeros =[1,2,3,6,7,8,10,15]
+print(len(numeros)
+
+numeros =[1,2,3,6,7,8,10,15]
+
+print(len(numeros)
+llargaria = len(numeros)
+print(llargaria)
+
+//Exercicis bàsics
+
+##Exercici A
+frase = "esto es un ejercicio"
+print(frase)
+
+nota = 9
+classe = "Analítica Digital"
+frase2=(f"en la assignatura {classe} he obtingut un {nota}")
+nota = 10
+frase2=(f"en la assignatura {classe} he obtingut un {nota}")
+print (frase2)
+
+##Exercici B
+
+notas = ["5","7","6","4"]
+alumnos = ["jaume","carla","pere","adrià","rafael","agnès"]
+nota_numerica = int(nota)
+print (nota_numerica + 1)
+
+for nota in notas:
+    print (nota_numerica+1)
+    
+    #part 2 de l'exercici
+    
+    for nota in notas:
+    #Imprimir 1 punt a totes les notes
+    print (nota_numerica+1)
+#imprimeix el noms + la nota
+
+
+for nota, nom in zip(notas, alumnos):
+    nota_numerica =int(nota)
+    nota_final = nota_numerica+1
+    print(nota_final, nom)
+    
+    
+ 
+
+lista = ["adria", "carla", "joan", "pere"]
+
+nom = "joan"
+
+#saber si el nom esta a la llista
+if nom in lista:
+    print ("Sí")
+else:
+    print("no")
+    
+
+    #index
+
+lista = ["adria", "carla", "joan", "pere"]
+
+nom = "joan"
+
+#saber si el nom esta a la llista
+if nom in lista:
+    print ("Sí")
+    #saber la posició del nom dins la llista
+    position = lista.index(nom)
+    print(position)
+else:
+    print("no")
+
+#valors únics dins la llista (no duplicats)
+
+lista = ["adria", "carla", "joan", "pere", "pere"]
+valors_unics = set(lista)
+print(valors_unics)
+#per saber quans alumnes hi ha a la llista
+print(len(valors_unics))
+
+#exercici 1 a)
+llista_unics = set(llista)
+print(f"Han vingut {len(llista_unics)} alumnes")
+
+#exercici 2 b)
+
+llista_unics = set(llista)
+print(f"Han vingut {len(llista_unics)} alumnes")
+
+for nom in llista_unics:
+    valor = llista.count (nom)
+    if valor > 1:
+        print(nom, valor)
+
+llista_repetits=[]
+for nom in llista_unics:
+    valor = llista.count (nom)
+    if valor > 1:
+        llista_repetits.append(nom)
+    print(f"Han repetit {len(llista_repetits)} alumnes")
+
+
+
+#contador
+
+llista_repetits=[]
+contador = 0
+for nom in llista_unics:
+    valor = llista.count(nom)
+    if valor > 1:
+        llista_repetits.append(nom)
+        contador = contador + 1
+
+print(f"Han repetit {len(llista_repetits)} alumnes")
+print(contador)
+
+#exercici 2 c)
+
+# l'equació de % =  x/y * 100
+percentatge = (contador/len(llista_unics)) * 100
+print (f"El percentatge d'assistència és del {percentatge} %")
+
+#Exercici 3 a)
+
+notes = ["5","3","7","8","9.5","4","6,2"]
+alumnes = ["adria","agnès","josep","rafa","cristina","Gemma","Eduard"]
+
+#Part a) imprimir les ntes per cada alumne
+for nota, alumne in zip(notes, alumnes):
+    print(nota, alumne)
+
+#Part b)Calcular la nota promig
+
+notes_arreglades = []
+for nota, alumne in zip(notes, alumnes):
+    print(nota_final, nom)
+
+    nota_arreglada = int(nota)
+    print(nota_arreglada)
+
+    if "." in nota:
+        nota_arreglada = float(nota)
+        notes_arreglades.append(nota_arreglada)
+    elif "," in nota:
+        nota_arreglada = float(nota.replace(",", "."))
+        notes_arreglades.append(nota_arreglada)
+    else:
+        nota_arreglada = int(nota)
+        notes_arreglades.append(nota_arreglada)
+
+    print(notes_arreglades)
+    print(round(sum(notes_arreglades)/len(notes_arreglades))
+          
+    #Calcula i imprimeix la nota més alta amb l'alumne
+nota_maxima = max(notes_arreglades)
+posicio = notes_arreglades.index(nota_maxima)
+print(nota_maxima, posicio)
+print(f"La màxima és un {nota_maxima}, i l'ha obtingut {alumnes[posicio]}")
+
+#nota mínima
+
+    nota_minima = min(notes_arreglades)
+    posicio = notes_arreglades.index(nota_minima)
+    print(nota_minima, posicio)
+    print(f"La màxima és un {nota_minima}, i l'ha obtingut {alumnes[posicio]}")
+
+    
+
+
