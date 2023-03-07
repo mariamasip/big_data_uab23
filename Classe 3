@@ -3,14 +3,11 @@
 **Pandas** és una llibreria a Python que s'especialitza en el maneig, anàlisi i processament de dades. 
 
 Com importar la llibreria:
-'''
-import pandas as pd
-'''
+'import pandas as pd'
 
 **Diccionari** és una estructura de dades que permet emmagatzemar qualsevol tipus d'informació, des de cadenes de text o caràcters fins a números enters, amb decimals, llistes i fins i tot altres diccionaris.
-''' 
-diccionari = {"clau": "valor"}
-'''
+
+'diccionari = {"clau": "valor"}'
 
 Exercici amb 'diccionari', 'tuplas' i 'llista':
 '''
