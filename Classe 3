@@ -5,7 +5,11 @@
 Com importar la llibreria:
 'import pandas as pd'
 
-**Diccionari** és una estructura de dades que permet emmagatzemar qualsevol tipus d'informació, des de cadenes de text o caràcters fins a números enters, amb decimals, llistes i fins i tot altres diccionaris.
+**Tupla** col·leccions de dades idèntiques o diferents classificades amb un índex i que no poden ser modificades.
+'''Tupla = (1,2,3,4,5)
+llista = [1,2,3,4,5]'''
+
+**Diccionari** és una estructura de dades que permet emmagatzemar qualsevol mena d'informació, des de cadenes de text o caràcters fins a números enters, amb decimals, llistes i fins i tot altres diccionaris.
 
 'diccionari = {"clau": "valor"}'
 
