@@ -1,276 +1,87 @@
-**cadenes**
+##Classe 1: Cadenes, números, variables, llistes, i el bucle for.
+
+**Les cadenes:** llistes de caràcters que es poden emmagatzemar a la memòria de l'ordinador que utilitzeu.
 ```
 "això és una cadena"
 "això és 'una cadena'"
 'això és una cadena'
 'Això "és" una cadena'
 ```
-#nums
-1
-1.3
+**Números** 'int' – enteros, 'float' – con decimales, 'complex' – complejos
+1 (int)
+1.3 (float)
 
-#variable
+**Variables:** són "etiquetes" que permeten fer referència a les dades.
+```
 var = 1
 print(var)
 
 var2 = 1+4
 print(var2)
-
+```
+Exemple de de 'print' les variables Usuari i Likes:
+'''
 usuari = "Ibai Llanos"
 likes = 100
-#print("L'usuari", usuari, "té", likes, "likes")
+print("L'usuari", usuari, "té", likes, "likes")
+'''
 
-#conversio likes en una cadena de text
+A continuació, convertim  la variable Likes en una cadena de text:
+'''
 #frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
 #print(frase_final)
+'''
 
-#les variables es sobreescriuen
+Les variables se sobreescriuen, es a dir, pots donar un valor nou a una mateixa variable definida anteriorent.
+'''
 var3= 1
 var4=2
 resultat = var3 + var4
-
 var5= 4
 resultat = var3 + var4 + var5
 print(resultat)
+'''
+En aquest exemple anterior, la variable 'var4' canviarà de valor de 2 a 4.
 
-#llistes d'items
+
+**Llistes d'items** per desar col·leccions de dades.
+'''
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
 print(llista_noms)
+'''
 
-#també podem fer llistes de variables
+També es poden fer llistes de variables:
+'''
+llista_noms = ["Pere", "Carme", "Joan"]
+congnoms = ["Fernandez", "Padilla", "Huguet"]
 nom_complert =[llista_noms, cognoms]
 print(nom_complert)
+'''
+######Loops
+**for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
 
-#Imprimir noms per separat, el loop for / per cada cosa a la llista in noms
+En aquest exemple, imprimim noms per separat ('for' / per cada cosa a la llista 'in noms').
+'''
 for nom in llista_noms:
     print("en", nom, "no ha vingut")
+'''
+Recorre dins la llista els elements.
 
-#altre sistema nomes amb python *3
+
+Una altra manera d'escriure el codi es el següent:
+'''
 for nom in llista_noms:
 print(f"En {nom} no ha vingut")
+'''
 
-#exercici llista
+**Exercici Llista**
+'''
 numeros = [1,2,3,4,10]
 afegit = 2
 
 for num in numeros:
     print(num + afegit)
-
-//classe 2//
-
-// Per afegir noms a la llista//
-
-llista = ["jaume", "carme"]
-llista2= ["raquel", "maria"]
-
-llista.append(llista2)
-print(llista)
-
-imprimir llista
-llista_noms= ["carme", "Joan"]
-
-for nom in llista_noms:
-    print(nom)
-
-//per imprimir un dels noms de la llista
-
-for nom in llista_noms:
-    if nom == "joan":
-        print(nom)
-        
-//
-llista_noms =["carme", "Joan"]
-
-for nom in llista_noms:
-    if nom == "joan":
-        print(nom)
-    else:
-        print(nom + "no es en joan")
-        
-//elif
-        
-  numeros =[1,2,3,6,7,8,10,15]
-
-for n in numeros:
-    if n < 6:
-        print(f"{n} es menor que 6")
-    elif n == 6:
-        print(f"{n}es igual que 6")
-    else:
-        print(f"{n} es major que 6")
-
-//funcions natives de python
-//imprimir nums llista
-
-numeros =[1,2,3,6,7,8,10,15]
-print(len(numeros)
-
-numeros =[1,2,3,6,7,8,10,15]
-
-print(len(numeros)
-llargaria = len(numeros)
-print(llargaria)
-
-//Exercicis bàsics
-
-##Exercici A
-frase = "esto es un ejercicio"
-print(frase)
-
-nota = 9
-classe = "Analítica Digital"
-frase2=(f"en la assignatura {classe} he obtingut un {nota}")
-nota = 10
-frase2=(f"en la assignatura {classe} he obtingut un {nota}")
-print (frase2)
-
-##Exercici B
-
-notas = ["5","7","6","4"]
-alumnos = ["jaume","carla","pere","adrià","rafael","agnès"]
-nota_numerica = int(nota)
-print (nota_numerica + 1)
-
-for nota in notas:
-    print (nota_numerica+1)
-    
-    #part 2 de l'exercici
-    
-    for nota in notas:
-    #Imprimir 1 punt a totes les notes
-    print (nota_numerica+1)
-#imprimeix el noms + la nota
-
-
-for nota, nom in zip(notas, alumnos):
-    nota_numerica =int(nota)
-    nota_final = nota_numerica+1
-    print(nota_final, nom)
-    
-    
- 
-
-lista = ["adria", "carla", "joan", "pere"]
-
-nom = "joan"
-
-#saber si el nom esta a la llista
-if nom in lista:
-    print ("Sí")
-else:
-    print("no")
-    
-
-    #index
-
-lista = ["adria", "carla", "joan", "pere"]
-
-nom = "joan"
-
-#saber si el nom esta a la llista
-if nom in lista:
-    print ("Sí")
-    #saber la posició del nom dins la llista
-    position = lista.index(nom)
-    print(position)
-else:
-    print("no")
-
-#valors únics dins la llista (no duplicats)
-
-lista = ["adria", "carla", "joan", "pere", "pere"]
-valors_unics = set(lista)
-print(valors_unics)
-#per saber quans alumnes hi ha a la llista
-print(len(valors_unics))
-
-#exercici 1 a)
-llista_unics = set(llista)
-print(f"Han vingut {len(llista_unics)} alumnes")
-
-#exercici 2 b)
-
-llista_unics = set(llista)
-print(f"Han vingut {len(llista_unics)} alumnes")
-
-for nom in llista_unics:
-    valor = llista.count (nom)
-    if valor > 1:
-        print(nom, valor)
-
-llista_repetits=[]
-for nom in llista_unics:
-    valor = llista.count (nom)
-    if valor > 1:
-        llista_repetits.append(nom)
-    print(f"Han repetit {len(llista_repetits)} alumnes")
-
-
-
-#contador
-
-llista_repetits=[]
-contador = 0
-for nom in llista_unics:
-    valor = llista.count(nom)
-    if valor > 1:
-        llista_repetits.append(nom)
-        contador = contador + 1
-
-print(f"Han repetit {len(llista_repetits)} alumnes")
-print(contador)
-
-#exercici 2 c)
-
-# l'equació de % =  x/y * 100
-percentatge = (contador/len(llista_unics)) * 100
-print (f"El percentatge d'assistència és del {percentatge} %")
-
-#Exercici 3 a)
-
-notes = ["5","3","7","8","9.5","4","6,2"]
-alumnes = ["adria","agnès","josep","rafa","cristina","Gemma","Eduard"]
-
-#Part a) imprimir les ntes per cada alumne
-for nota, alumne in zip(notes, alumnes):
-    print(nota, alumne)
-
-#Part b)Calcular la nota promig
-
-notes_arreglades = []
-for nota, alumne in zip(notes, alumnes):
-    print(nota_final, nom)
-
-    nota_arreglada = int(nota)
-    print(nota_arreglada)
-
-    if "." in nota:
-        nota_arreglada = float(nota)
-        notes_arreglades.append(nota_arreglada)
-    elif "," in nota:
-        nota_arreglada = float(nota.replace(",", "."))
-        notes_arreglades.append(nota_arreglada)
-    else:
-        nota_arreglada = int(nota)
-        notes_arreglades.append(nota_arreglada)
-
-    print(notes_arreglades)
-    print(round(sum(notes_arreglades)/len(notes_arreglades))
-          
-    #Calcula i imprimeix la nota més alta amb l'alumne
-nota_maxima = max(notes_arreglades)
-posicio = notes_arreglades.index(nota_maxima)
-print(nota_maxima, posicio)
-print(f"La màxima és un {nota_maxima}, i l'ha obtingut {alumnes[posicio]}")
-
-#nota mínima
-
-    nota_minima = min(notes_arreglades)
-    posicio = notes_arreglades.index(nota_minima)
-    print(nota_minima, posicio)
-    print(f"La màxima és un {nota_minima}, i l'ha obtingut {alumnes[posicio]}")
-
-    
-
+'''
+El que hem fet en aquest exercici és definir una llista de números i una variable que és = 2. Amb el 'for' el que fem és que a cada element que tenim a la llista l'imprimim i i sumem 2(de la variable 'afegit').
 
