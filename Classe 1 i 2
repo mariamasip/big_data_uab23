@@ -1,8 +1,10 @@
-#cadenes
+**cadenes**
+```
 "això és una cadena"
 "això és 'una cadena'"
 'això és una cadena'
 'Això "és" una cadena'
+```
 #nums
 1
 1.3
