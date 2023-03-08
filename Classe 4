@@ -1,7 +1,11 @@
-Direcció API twitch - https://pytwitchapi.readthedocs.io/en/v2.5.7/modules/twitchAPI.twitch.html
+##Classe 3: API Twitch
+
+
+Direcció API twitch -  'https://pytwitchapi.readthedocs.io/en/v2.5.7/modules/twitchAPI.twitch.html'
+
 pip install twitchAPI==2.5.7.1
 
-per impirmir dades d'un perfil(el meu)
+Per impirmir dades d'un perfil (el meu en aquest cas)
 '''
 from twitchAPI.twitch import Twitch
 from pprint import pprint
@@ -9,7 +13,8 @@ from pprint import pprint
 twitch = Twitch('5o4e1o1ofoml8nxmq023liwk4vy870', 'ikwo5xvth1y3pyu7t9e5r0z8lvs0xi')
 pprint(twitch.get_users(logins=['mariamasip5']))
 '''
-Funció get_streams 
+Funció 'get_streams'
+'''
 from twitchAPI.twitch import Twitch
 from pprint import pprint
 
@@ -17,16 +22,18 @@ twitch = Twitch('5o4e1o1ofoml8nxmq023liwk4vy870', 'ikwo5xvth1y3pyu7t9e5r0z8lvs0x
 
 streams = twitch.get_streams(first=20, language="es") #funcio per agafar streams
 print(streams)
+'''
 
-#per exportar en un docu json
+#Per exportar en un document Json
+'''
 streams = twitch.get_streams(first=20, language="es") #funcio per agafar streams
 print(streams)
 
 with open("output_file.json", 'w', encoding='utf-8') as f:
     json.dump(streams, f, ensure_ascii=False, indent=4)
+'''   
     
-    
-#Selecionar les dades del json que volem i les ordenem
+#Selecionar les dades del Json que volem i les ordenem
 '''
 dades = streams["data"]
 
@@ -41,12 +48,13 @@ for dada in dades:
     Started At = dada["started_at"]
     is_mature = dada["is_mature"]
 '''
-importar pandas
+Com importar pandas
 '''
 import pandas aspd #a dalt del docu
 '''
 
-tot el docu 
+El ficher sencer per tal de seleccionar aquelles caselles que trobem interessants i després guardar-les en un csv.
+'''
 from twitchAPI.twitch import Twitch
 from pprint import pprint
 import json
@@ -86,11 +94,10 @@ for dada in dades:
 
 final_dataframe = pd.concat(llista_dataframes)
 final_dataframe.to_csv("prova2.csv", index=False)
+'''
+Final del fixer
 
-#finaldocu
-
-
-#funció
+**Funció**
 '''
 def loquesea():
     print("hola")
@@ -115,10 +122,8 @@ def loquesea(pip, car): #agafa les variables per ordre de recepció, no importa 
 loquesea(variable)
 '''
 
-
-
+El document final amb el Try i l'except. Amb el cursor que fa el canvi de pàgina
 '''
-docu final, 
 from pprint import pprint
 import json
 from twitchAPI.twitch import Twitch
@@ -160,7 +165,7 @@ def crida(cursor): #reb la variable
         llista_dataframes.append(df)
 
     try:
-        cursor = streams["pagination"]["cursor"]
+        cursor = streams["pagination"]["cursor"]#el cursor canvia de pàgina
         print(f"Fent una nova consulta. Total de streams {len(llista_dataframes)}")
         time.sleep(1)
         crida(cursor)
