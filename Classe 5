@@ -1,0 +1,140 @@
+**Exercici Casa** Pandas
+
+import pandas as pd
+import csv
+import pandas
+
+import pandas as pd
+import statistics
+data = pd.read_csv('dataset_youtube.csv')
+print(data); #obrir csv
+
+print(data.shape) #total de files i columnes ( 19128 files i 25 columnes)
+print (data.head()) #imprimeix linies del csv
+
+for col in data.columns:
+    print(col) #imprimerix totes les columnes (25 columnes)
+
+print(data['viewCount']) #impirmeix la columna viewCount (nan al csv)
+
+
+#data_net.drop(["position", "publishedAt", "dislikeCount"], axis=1) #per a eliminar columnes del dataset
+#print (data_net.shape)
+
+
+canals_unics = data.channelTitle.unique() #per saber quans canals hi ha, en aquest cas 2
+print(canals_unics)
+
+#opció 1 per a separar el dataframe
+#df_1= df.loc[df['channelTitle']== 'NPR Music']
+#df_2= df.loc[df['channelTitle']== 'KEXP']
+
+#print(df_1)
+#print(df_2)
+
+NPR_Music=[] #Per a saber el total dels videos de cada canal
+KEXP=[]
+for d in data['channelTitle']:
+    if d == 'NPR Music':
+        NPR_Music.append(d)
+    else:
+        d == 'KEXP'
+        KEXP.append(d)
+
+print(len(NPR_Music)) #el total de videos per a NPR Music és de 2314
+print(len(KEXP)) #el total de videos per a KEXP és de 16814
+
+mean = statistics.mean(data['viewCount'])
+print(mean)# promig de viewers total és 206347.4659
+
+
+
+#print(f"El promig de NPR és:{round(df_1["viewCount"].mean()) imprimeix el promig
+#print(f"El promig de KEXP és:{round(df_2["viewCount"].mean())
+
+
+promedio_por_emisora = data.groupby("channelTitle")["viewCount"].mean()
+print(promedio_por_emisora) #per a calcular el promig Viewers
+
+promedio_por_emisora = data.groupby("channelTitle")["likeCount"].mean()
+print(promedio_por_emisora) #per a calcular el promig Likes
+
+promedio_por_emisora = data.groupby("channelTitle")["commentCount"].mean()
+print(promedio_por_emisora) #per a calcular el promig Comentaris
+
+#la diferencia absuluta, desviació, valor de viewers i restar el promig
+
+list_desviacio = []
+for index, row in df_1.iterrows():
+    desviacio = prom_expectadors_1 - row["viewCount"]
+    list_desviacio.append(desviacio)
+
+df_1["desviacio"] = list_desviacio
+print(df_1)
+#df_1.to_csv("exemple.csv")
+
+
+////
+
+**Importar csv de 4G**
+
+import pandas as pd
+import time
+
+#Columnes en el dataset
+inici = time.time()
+
+df= pd.read_csv(arxiu.csv, sep='\t', nrows=25, usecols=["captured_at", "streamer_name", "viewer_count", "game_name", "stream_title"])#el dataset està separat per tabuladors \t
+print(df)
+
+posicio = df["viewer_count"].idxmax() #troba la fila, index de la fila
+print(df["streamer_name"].iloc[posicio], df["stream_title"].iloc[posicio], df["viewer_count"].iloc[posicio], df["captured_at"].iloc[posicio])
+
+dades_kings_leage = df[df["streamer_name"] == "kingsleague"] #per extreure la kings league
+print(dades_kings_league)
+dades_kings_leage.to_csv("kingsleague.csv", index=False)
+
+#sample = df.sample(frac= 0,1) #la fracció 1 es el 100% del dataset, sample no ens serveix perqué ha de carregar tot el dataset igualemnt
+#print(sample)
+
+#concepte: granularitat de les dades
+final = time.time() #el temps que tarda en fer el pprocés
+print(final-inici)
+
+**El mateix amb molts menys recursos; chunks.**
+import pandas as pd
+import time
+
+#Columnes en el dataset
+inici = time.time()
+
+df= pd.read_csv(arxiu.csv, sep='\t', nrows=25, usecols=["captured_at", "streamer_name", "viewer_count", "game_name", "stream_title"] chunksize= 1000000)#el dataset està separat per tabuladors \t
+print(df)
+
+llista_kings_league= []
+
+for chunk in df: #treballa per blocs, itera en els chunks 
+    dades_kings_leage = df[df["streamer_name"] == "kingsleague"] #per extreure la kings league
+    print(dades_kings_league)
+    llista_kings_league.append(dades_kings_leage)
+    final_frame = pd.contact(llista_kings_leage)
+    final_frame-to_csv("kingsleague.csv", index=False)
+    
+dades_kings_leage.to_csv("kingsleague.csv", index=False)
+
+#sample = df.sample(frac= 0,1) #la fracció 1 es el 100% del dataset, sample no ens serveix perqué ha de carregar tot el dataset igualemnt
+#print(sample)
+
+#concepte: granularitat de les dades
+final = time.time() #el temps que tarda en fer el pprocés
+print(final-inici)
+
+
+
+
+
+
+
+
+
+
