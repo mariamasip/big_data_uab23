@@ -1,0 +1,124 @@
+Api Spotify
+
+#https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlists-tracks
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+import json
+import time
+import pandas as pd
+
+SPOTIPY_CLIENT_ID='31b9a9b794794664a637c9f2965e0383'
+SPOTIPY_CLIENT_SECRET='17bcb8109c3242e7989e8d1053dcbc0f'
+
+
+auth_manager = SpotifyClientCredentials(SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET)
+sp = spotipy.Spotify(auth_manager=auth_manager)
+
+playlist = '3oopyXIZGLFtHjFYN9KbuI'
+
+#https://spotipy.readthedocs.io/en/2.22.1/#spotipy.client.Spotify.playlist_items
+query = sp.playlist_items(playlist, fields=None, limit=100, offset=0, market=None) #amb sp carregues les credencials
+
+relacions = []
+
+
+#print(query)
+
+#with open('data.json', 'w', encoding='utf-8') as f:
+    #json.dump(query, f, ensure_ascii=False, indent=4)
+
+for i in query["items"]: #el nom està dins d'artist, track i englobat per items
+    artists = i["track"]["artists"]
+
+    for artist in artists: #per a cada artista de la playlist treu els artistes recomanats
+        source_artist_name = artist["name"]
+        source_artist_id = artist["id"]
+        #print(source_artist_name, source_artist_id)
+
+        # with open(f'{artist_id}.json', 'w', encoding='utf-8') as f:  #guardar
+        # json.dump(related_artists, f, ensure_ascii=False, indent=4)
+
+        # necessites una taula dividida en source i target per a fer un dataset i llistar relacions
+
+        # generarem llista de relacions
+        related_artists = sp.artist_related_artists(source_artist_id)
+        print("estic dormint")
+        time.sleep(1) #farà la petició cada 1 segon
+
+    relacionats = related_artists["artists"] #per cada elemnt de la llista agafem el name
+    for l in relacionats:
+        try:#em posat el try except perque ens ha donat error
+                related_artist_name = l["name"]
+                #print(related_artist_name)
+                tupla = (source_artist_name, related_artist_name) #Guardem en una tupla, l'artista i el nom relacionat (la taula)
+                relacions.append(tupla) #ho afegim a la llista anteriorment creada
+        except TypeError:
+            pass
+
+df = pd.DataFrame.from_records(relacions, columns=['source', 'target'])
+df.to_csv('dataset.csv', index=False)
+
+
+DOCUMENT JSON (EXEMPLE 1 ARTISTA)
+"href": "https://api.spotify.com/v1/playlists/3oopyXIZGLFtHjFYN9KbuI/tracks?offset=0&limit=100&additional_types=track%2Cepisode",
+    "items": [
+        {
+            "added_at": "2012-04-11T08:07:06Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/"
+                },
+                "href": "https://api.spotify.com/v1/users/",
+                "id": "",
+                "type": "user",
+                "uri": "spotify:user:"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_group": "compilation",
+                    "album_type": "compilation",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+                            "id": "0LyfQWJT6nXafLPZqxe9Of",
+                            "name": "Various Artists",
+                            "type": "artist",
+                            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+                        }
+                    ],
+                    "available_markets": [],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/0U9LMMfkDK3alar1KZ7JEX"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/0U9LMMfkDK3alar1KZ7JEX",
+                    "id": "0U9LMMfkDK3alar1KZ7JEX",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b2736be8f9fc410d7fe724a804c2",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e026be8f9fc410d7fe724a804c2",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d000048516be8f9fc410d7fe724a804c2",
+                            "width": 64
+                        }
+                    ],
+                    "is_playable": true,
+                    "name": "Absolutely The Best Of Reggae Vol. 1",
+                    "release_date": "2006-08-18",
+                    "release_date_precision": "day",
+                    "total_tracks": 15,
+                    "type": "album",
+                    "uri": "spotify:album:0U9LMMfkDK3alar1KZ7JEX"
+                },
