@@ -21,7 +21,7 @@ llista = [1,2,3,4,5]
 'diccionari = {"clau": "valor"}'
 ```
 
-##Exercicis
+## Exercicis
 ### Exercici 1:
 Exercici amb 'diccionari', 'tuplas' i 'llista':
 ```Python
