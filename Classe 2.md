@@ -57,7 +57,7 @@ for n in numeros:
 Si el número de la llista és més petit **'<'** que 6, s'imprimirà: X es menor que 6. Si és igual **'=='** que 6, s'imprimirà: X és igual que 6. Si és major **'>'** que 6, s'imprimirà: X és major que 6.
 
 
-### 4-len
+### 4-Len
 Retorna la longitud d'un objecte, ja sigui una llista, cadena, tupla o diccionari.
 ```Python
 numeros =[1,2,3,6,7,8,10,15]
