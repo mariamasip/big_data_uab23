@@ -5,7 +5,7 @@ Direcció API twitch -  'https://pytwitchapi.readthedocs.io/en/v2.5.7/modules/tw
 ```Python
 pip install twitchAPI==2.5.7.1
 ```
-Per **impirmir dades d'un perfil (el meu en aquest cas)
+Per **impirmir dades** d'un perfil (el meu en aquest cas)
 ```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
@@ -13,7 +13,7 @@ from pprint import pprint
 twitch = Twitch('-', '-')
 pprint(twitch.get_users(logins=['mariamasip5']))
 ```
-Funció 'get_streams'
+### Funció 'get_streams'
 ```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
@@ -24,7 +24,8 @@ streams = twitch.get_streams(first=20, language="es") #funcio per agafar streams
 print(streams)
 ```
 
-#Per exportar en un document Json
+### Exportar Json
+Per exportar en un document Json:
 ```Python
 streams = twitch.get_streams(first=20, language="es") #funcio per agafar streams
 print(streams)
@@ -33,7 +34,8 @@ with open("output_file.json", 'w', encoding='utf-8') as f:
     json.dump(streams, f, ensure_ascii=False, indent=4)
 ```  
     
-#Selecionar les dades del Json que volem i les ordenem
+### Selecionar les dades 
+Selecionar les dades del Json que volem i les ordenem:
 ```Python
 dades = streams["data"]
 
@@ -48,12 +50,13 @@ for dada in dades:
     Started At = dada["started_at"]
     is_mature = dada["is_mature"]
 ```
-Com importar pandas
+### Importar pandas
 ```Python
 import pandas aspd #a dalt del docu
 ```
 
-El ficher sencer per tal de seleccionar aquelles caselles que trobem interessants i després guardar-les en un csv.
+###Fixer sencer exemple
+El fixer sencer per tal de seleccionar aquelles caselles que trobem interessants i després guardar-les en un csv.
 ```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
@@ -97,7 +100,7 @@ final_dataframe.to_csv("prova2.csv", index=False)
 ```
 Final del fixer
 
-**Funció**
+## Funcions
 ```Python
 def loquesea():
     print("hola")
