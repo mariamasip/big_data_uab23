@@ -1,4 +1,4 @@
-##Classe 3: API Twitch
+## Classe 3: API Twitch
 
 
 Direcció API twitch -  'https://pytwitchapi.readthedocs.io/en/v2.5.7/modules/twitchAPI.twitch.html'
