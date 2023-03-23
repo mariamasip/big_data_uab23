@@ -14,7 +14,8 @@ llistes de caràcters que es poden emmagatzemar a la memòria de l'ordinador que
 1.3 (float)
 ```
 
-### Variables: són "etiquetes" que permeten fer referència a les dades.
+### Variables: 
+són **etiquetes** que permeten fer referència a les dades.
 ```Python
 var = 1
 print(var)
@@ -22,13 +23,13 @@ print(var)
 var2 = 1+4
 print(var2)
 ```
-Exemple de de 'print' les variables Usuari i Likes:
+Exemple de de **'print'** les variables Usuari i Likes:
 ```Python
 usuari = "Ibai Llanos"
 likes = 100
 print("L'usuari", usuari, "té", likes, "likes")
 ```
-A continuació, convertim  la variable Likes en una cadena de text:
+A continuació, convertim  la variable Likes en una **cadena de text**:
 ```Python
 frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
 print(frase_final)
@@ -45,7 +46,8 @@ print(resultat)
 En aquest exemple anterior, la variable 'var4' canviarà de valor de 2 a 4.
 
 
-### Llistes d'items per desar col·leccions de dades.
+### Llistes d'items 
+Aquestes s'utilitzen per a desar col·leccions de dades.
 ```Python
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
@@ -53,7 +55,7 @@ print(llista_noms)
 ```
 
 
-També es poden fer llistes de variables:
+També es poden fer **llistes de variables**:
 ```Python
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
@@ -62,7 +64,7 @@ print(nom_complert)
 ```
 
 ### Els Loops
-**for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
+El bucle **for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
 
 En aquest exemple, imprimim noms per separat ('for' / per cada cosa a la llista 'in noms').
 ```Python
