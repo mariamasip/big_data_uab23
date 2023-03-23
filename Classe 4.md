@@ -1,16 +1,16 @@
 ## Classe 3: API Twitch
 
-
+### API
 Direcció API twitch -  'https://pytwitchapi.readthedocs.io/en/v2.5.7/modules/twitchAPI.twitch.html'
-
+```Python
 pip install twitchAPI==2.5.7.1
-
-Per impirmir dades d'un perfil (el meu en aquest cas)
+```
+Per **impirmir dades d'un perfil (el meu en aquest cas)
 ```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
 
-twitch = Twitch('5o4e1o1ofoml8nxmq023liwk4vy870', 'ikwo5xvth1y3pyu7t9e5r0z8lvs0xi')
+twitch = Twitch('-', '-')
 pprint(twitch.get_users(logins=['mariamasip5']))
 ```
 Funció 'get_streams'
