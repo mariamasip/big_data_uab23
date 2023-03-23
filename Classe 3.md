@@ -1,23 +1,28 @@
-##Classe 3: Pandas
+## Classe 3: Pandas
 
-**Pandas** és una llibreria a Python que s'especialitza en el maneig, anàlisi i processament de dades. 
+### 1-Pandas
+És una **llibreria a Python** que s'especialitza en el maneig, anàlisi i processament de dades. 
 
 Com importar la llibreria:
 ```Python
 'import pandas as pd'
 ```
 
-**Tupla** col·leccions de dades idèntiques o diferents classificades amb un índex i que no poden ser modificades.
+### 2-Tupla
+Col·leccions de dades idèntiques o diferents classificades amb un índex i que no poden ser modificades.
 ```Python
 Tupla = (1,2,3,4,5)
 llista = [1,2,3,4,5]
 ```
 
-**Diccionari** és una estructura de dades que permet emmagatzemar qualsevol mena d'informació, des de cadenes de text o caràcters fins a números enters, amb decimals, llistes i fins i tot altres diccionaris.
+### 3-Diccionari
+És una estructura de dades que permet emmagatzemar qualsevol mena d'informació, des de cadenes de text o caràcters fins a números enters, amb decimals, llistes i fins i tot altres diccionaris.
 ```Python
 'diccionari = {"clau": "valor"}'
 ```
 
+##Exercicis
+### Exercici 1:
 Exercici amb 'diccionari', 'tuplas' i 'llista':
 ```Python
 diccionari = {"clau": "valor"}
@@ -32,8 +37,8 @@ for t in llista_final:
   nota = t[0] connjunt = t[] 
 ```
 
-**Exercici 2:** 
-Tasca 1: unificar els noms en una unica cadena de text llista_final =[]
+### Exercici 2:
+**Tasca 1:** unificar els noms en una unica cadena de text llista_final =[]
 ```Python
 notes = [1,6,8,9,10,6,5] 
 alumnes = ["Jaume", "Carles", "Cristina", "Josep", "Rafael", "Agnès", "Marta"] cognoms = ["Tort","Soldevila","Luna","Muñoz","Fernandez","Hernandez", "Llopart"]
@@ -43,7 +48,7 @@ for alumne, cognom in zip(alumnes, cognoms):
 print(llista_final)
 ```
 
-Tasca 2: Ajuntar els noms + la nota final
+**Tasca 2:** Ajuntar els noms + la nota final
 ```Python
 dades_finals = [] 
 
@@ -61,7 +66,7 @@ for alumne, cognom, nota in zip(alumnes, cognoms, notes):
 print(llista_final)
 ```
 
-Tasca 3: sumar un punt a totes les notes sense superar el 
+**Tasca 3:** sumar un punt a totes les notes sense superar el 
 ```Python 
 for persona in llista_final: 
   nova_nota = persona [1]+1
@@ -70,7 +75,7 @@ for persona in llista_final:
 print(nova_persona) 
 ```
 
-Tasca 4: Afegir un tercer element dins la tupla:
+**Tasca 4:** Afegir un tercer element dins la tupla:
 
 Si la nota final es inferior a 5, añadir el texto "suspendido".
 Si la nota se encuentra entre 5 y 6 (ambos incluídos), añadir el texto "aprobado".
@@ -109,7 +114,7 @@ df.to_csv(dataset.csv)
 ```
 El que fem amb df, és convertir el resultat que imprimeix per pantalla en un csv.
 
-Tasca 5: Transforma la llista de tuplas en un dataset
+**Tasca 5:** Transforma la llista de tuplas en un dataset
 ```Python
 import json
 import pandas as pd
