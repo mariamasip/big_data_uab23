@@ -6,15 +6,15 @@ Direcció API twitch -  'https://pytwitchapi.readthedocs.io/en/v2.5.7/modules/tw
 pip install twitchAPI==2.5.7.1
 
 Per impirmir dades d'un perfil (el meu en aquest cas)
-'''
+```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
 
 twitch = Twitch('5o4e1o1ofoml8nxmq023liwk4vy870', 'ikwo5xvth1y3pyu7t9e5r0z8lvs0xi')
 pprint(twitch.get_users(logins=['mariamasip5']))
-'''
+```
 Funció 'get_streams'
-'''
+```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
 
@@ -22,19 +22,19 @@ twitch = Twitch('5o4e1o1ofoml8nxmq023liwk4vy870', 'ikwo5xvth1y3pyu7t9e5r0z8lvs0x
 
 streams = twitch.get_streams(first=20, language="es") #funcio per agafar streams
 print(streams)
-'''
+```
 
 #Per exportar en un document Json
-'''
+```Python
 streams = twitch.get_streams(first=20, language="es") #funcio per agafar streams
 print(streams)
 
 with open("output_file.json", 'w', encoding='utf-8') as f:
     json.dump(streams, f, ensure_ascii=False, indent=4)
-'''   
+```  
     
 #Selecionar les dades del Json que volem i les ordenem
-'''
+```Python
 dades = streams["data"]
 
 for dada in dades:
@@ -47,14 +47,14 @@ for dada in dades:
     viewers_count = dada["viewer_count"]
     Started At = dada["started_at"]
     is_mature = dada["is_mature"]
-'''
+```
 Com importar pandas
-'''
+```Python
 import pandas aspd #a dalt del docu
-'''
+```
 
 El ficher sencer per tal de seleccionar aquelles caselles que trobem interessants i després guardar-les en un csv.
-'''
+```Python
 from twitchAPI.twitch import Twitch
 from pprint import pprint
 import json
@@ -94,36 +94,36 @@ for dada in dades:
 
 final_dataframe = pd.concat(llista_dataframes)
 final_dataframe.to_csv("prova2.csv", index=False)
-'''
+```
 Final del fixer
 
 **Funció**
-'''
+```Python
 def loquesea():
     print("hola")
 
 loquesea()
-'''
+```
 
 Amb una variable fora de la funció
-'''
+```Python
 variable="hola"
 def loquesea():
     print(variable)
 
 loquesea()
-'''
-'''
+```
+```Python
 variable="hola"
 variable_2 = "adeu"
 def loquesea(pip, car): #agafa les variables per ordre de recepció, no importa en nom en la invocació
     print(pip, car)
 
 loquesea(variable)
-'''
+```
 
 El document final amb el Try i l'except. Amb el cursor que fa el canvi de pàgina
-'''
+```Python
 from pprint import pprint
 import json
 from twitchAPI.twitch import Twitch
@@ -181,7 +181,7 @@ crida(cursor_dummy)#variables dummy(buscar)
 final_dataframe = pd.concat(llista_dataframes)
 final_dataframe.to_csv("cat.csv", index=False)
 print(final_dataframe)
-'''
+```
 
 
 
