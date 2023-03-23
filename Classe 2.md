@@ -125,7 +125,7 @@ else:
 ```
 
     
-### Index
+### 1-Index
 aquesta funció ens permet obtenir l'índex o la posició de la primera aparició d'un element dins d'una llista.
 ```Python
 lista = ["adria", "carla", "joan", "pere"]
@@ -142,7 +142,7 @@ else:
 ```
 És el mateix que en l'exercici anterior però utilitzant la funció index de manera més eficient.
 
-### set
+### 2-set
 és una col·lecció d'elements desordenats que no admet duplicats.
 ```Python
 lista = ["adria", "carla", "joan", "pere", "pere"]
@@ -241,7 +241,7 @@ for nota, alumne in zip(notes, alumnes):
     print(round(sum(notes_arreglades)/len(notes_arreglades))
 ```
           
-Calcula i imprimeix la nota més alta amb l'alumne
+Calcula i imprimeix la **nota més alta** amb l'alumne
 ```Python
 nota_maxima = max(notes_arreglades)
 posicio = notes_arreglades.index(nota_maxima)
@@ -249,7 +249,7 @@ print(nota_maxima, posicio)
 print(f"La màxima és un {nota_maxima}, i l'ha obtingut {alumnes[posicio]}")
 ```
 
-Imprineix la nota mínima
+Imprineix la **nota mínima**
 ```Python
 nota_minima = min(notes_arreglades)
 posicio = notes_arreglades.index(nota_minima)
