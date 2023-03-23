@@ -58,7 +58,7 @@ congnoms = ["Fernandez", "Padilla", "Huguet"]
 nom_complert =[llista_noms, cognoms]
 print(nom_complert)
 '''
-######Loops
+######Loopss
 **for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
 
 En aquest exemple, imprimim noms per separat ('for' / per cada cosa a la llista 'in noms').
