@@ -1,7 +1,7 @@
 ## classe 2
 
-### llista.append
-**Afegir noms a una llista** Amb 'llista.append' podem sumar elements d'una llista en una altra.
+### 1-llista.append
+**Afegir noms a una llista**, amb 'llista.append' podem sumar elements d'una llista en una altra.
 ```Python
 llista = ["jaume", "carme"]
 llista2= ["raquel", "maria"]
@@ -9,7 +9,6 @@ llista2= ["raquel", "maria"]
 llista.append(llista2)
 print(llista)
 ```
-
 
 Imprimir una llista amb els nom separats, a través del bucle 'for'.
 ```Python
@@ -28,7 +27,8 @@ for nom in llista_noms:
 ```
 
 
-**Else** va després de 'if' en cas que no compleixi la condició de l'if' aquesta saltarà a 'else'. 
+### 2-Else
+Va després de 'if' en cas que no compleixi la condició de l'if' aquesta saltarà a 'else'. 
 ```Python
 llista_noms =["carme", "Joan"]
 
@@ -41,7 +41,8 @@ for nom in llista_noms:
  Com que el nom no és igual '==' a Joan, imprimeix per pantalla: X no es Joan.
  
         
- **Elif** Són condicionals else encadenats.
+### 3-Elif
+Són condicionals else encadenats.
 ```Python
 numeros =[1,2,3,6,7,8,10,15]
 
@@ -53,10 +54,11 @@ for n in numeros:
     else:
         print(f"{n} es major que 6")
 ```
-Si el número de la llista és més petit '<' que 6, s'imprimirà: X es menor que 6. Si és igual '==' que 6, s'imprimirà: X és igual que 6. Si és major '>' que 6, s'imprimirà: X és major que 6.
+Si el número de la llista és més petit **'<'** que 6, s'imprimirà: X es menor que 6. Si és igual **'=='** que 6, s'imprimirà: X és igual que 6. Si és major **'>'** que 6, s'imprimirà: X és major que 6.
 
 
-**len** retorna la longitud d'un objecte, ja sigui una llista, cadena, tupla o diccionari.
+### 4-len
+Retorna la longitud d'un objecte, ja sigui una llista, cadena, tupla o diccionari.
 ```Python
 numeros =[1,2,3,6,7,8,10,15]
 print(len(numeros)
@@ -69,9 +71,9 @@ print(llargaria)
 ```
 
 
-######Exercicis bàsics
+## Exercicis bàsics
 
-**Exercici A**
+### Exercici A
 ```Python
 frase = "esto es un ejercicio"
 print(frase)
@@ -85,7 +87,7 @@ print (frase2)
 ```
 
 
-**Exercici B**
+### Exercici B
 ```Python
 notas = ["5","7","6","4"]
 alumnos = ["jaume","carla","pere","adrià","rafael","agnès"]
@@ -123,7 +125,8 @@ else:
 ```
 
     
-**index** aquesta funció ens permet obtenir l'índex o la posició de la primera aparició d'un element dins d'una llista.
+### Index
+aquesta funció ens permet obtenir l'índex o la posició de la primera aparició d'un element dins d'una llista.
 ```Python
 lista = ["adria", "carla", "joan", "pere"]
 
@@ -139,7 +142,8 @@ else:
 ```
 És el mateix que en l'exercici anterior però utilitzant la funció index de manera més eficient.
 
-**set**és una col·lecció d'elements desordenats que no admet duplicats.
+### set
+és una col·lecció d'elements desordenats que no admet duplicats.
 ```Python
 lista = ["adria", "carla", "joan", "pere", "pere"]
 
@@ -150,7 +154,7 @@ print(len(valors_unics))
 ```
 Per saber quans alumnes, sense contar els duplicats, dins una llista.
 
-Exercici 1
+### Exercici 1
 a)
 ```Python
 llista = [ "david", "dani", "marta", "jaume", "adria", "carla", "joan", "pere", "carla", "pere", "adria", "quico", "pere", "joan", "agustí", "adria", "joan", "adria", "siscu", "carles", "dani", "carla"]
@@ -158,7 +162,7 @@ llista_unics = set(llista)
 print(f"Han vingut {len(llista_unics)} alumnes")
 ```
 
-Exercici 2
+### Exercici 2
 b)
 ```Python
 llista = [ "david", "dani", "marta", "jaume", "adria", "carla", "joan", "pere", "carla", "pere", "adria", "quico", "pere", "joan", "agustí", "adria", "joan", "adria", "siscu", "carles", "dani", "carla"]
@@ -193,7 +197,7 @@ print(f"Han repetit {len(llista_repetits)} alumnes")
 print(contador)
 ```
 
-Exercici 2 
+### Exercici 2 
 c)
 ```Python
 percentatge = (contador/len(llista_unics)) * 100
@@ -201,7 +205,7 @@ print (f"El percentatge d'assistència és del {percentatge} %")
 ```
 L'equació de % =  x/y * 100
 
-Exercici 3
+### Exercici 3
 a)
 ```Python
 notes = ["5","3","7","8","9.5","4","6,2"]
