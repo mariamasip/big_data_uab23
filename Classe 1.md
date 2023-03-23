@@ -1,12 +1,14 @@
 ## Classe 1: Cadenes, números, variables, llistes, i el bucle for.
-### Les cadenes: llistes de caràcters que es poden emmagatzemar a la memòria de l'ordinador que utilitzeu.
+### Les cadenes 
+llistes de caràcters que es poden emmagatzemar a la memòria de l'ordinador que utilitzem.
 ```Python
 "això és una cadena"
 "això és 'una cadena'"
 'això és una cadena'
 'Això "és" una cadena'
 ```
-### Números 'int' – enteros, 'float' – con decimales, 'complex' – complejos
+### Números 
+**'int'** – enteros, **'float'** – con decimales, **'complex'** – complejos
 ```Python
 1 (int)
 1.3 (float)
