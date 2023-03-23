@@ -3,18 +3,23 @@
 **Pandas** és una llibreria a Python que s'especialitza en el maneig, anàlisi i processament de dades. 
 
 Com importar la llibreria:
+```Python
 'import pandas as pd'
+```
 
 **Tupla** col·leccions de dades idèntiques o diferents classificades amb un índex i que no poden ser modificades.
-'''Tupla = (1,2,3,4,5)
-llista = [1,2,3,4,5]'''
+```Python
+Tupla = (1,2,3,4,5)
+llista = [1,2,3,4,5]
+```
 
 **Diccionari** és una estructura de dades que permet emmagatzemar qualsevol mena d'informació, des de cadenes de text o caràcters fins a números enters, amb decimals, llistes i fins i tot altres diccionaris.
-
+```Python
 'diccionari = {"clau": "valor"}'
+```
 
 Exercici amb 'diccionari', 'tuplas' i 'llista':
-'''
+```Python
 diccionari = {"clau": "valor"}
 tupla = ("elquesigui","elquesigui")
 llista_1 = [6,9] llista_2 = ["josep", "maria"]
@@ -25,45 +30,45 @@ for nota, nom in zip(llista_1, llista_2):
 
 for t in llista_final:
   nota = t[0] connjunt = t[] 
-'''
+```
 
 **Exercici 2:** 
 Tasca 1: unificar els noms en una unica cadena de text llista_final =[]
-'''
+```Python
 notes = [1,6,8,9,10,6,5] 
 alumnes = ["Jaume", "Carles", "Cristina", "Josep", "Rafael", "Agnès", "Marta"] cognoms = ["Tort","Soldevila","Luna","Muñoz","Fernandez","Hernandez", "Llopart"]
 
 for alumne, cognom in zip(alumnes, cognoms):
    conjunt = f"{alumne} {cognom}" print(conjunt) llista_final.append(conjunt)
 print(llista_final)
-
+```
 
 Tasca 2: Ajuntar els noms + la nota final
-'''
+```Python
 dades_finals = [] 
 
 for alumne, nota in zip(llista_final, notes):
   conjunt = (alumne, nota)
     dades_finals.append(conjunt)
 print(dades_finals)
-'''
+```
 Una segona manera de fer-ho:
-'''
+```Python
 llista_final =[]
 
 for alumne, cognom, nota in zip(alumnes, cognoms, notes): 
   conjunt = f"{alumne} {cognom}" tupla = (conjunt, nota) llista_final.append(tupla) 
 print(llista_final)
-'''
+```
 
 Tasca 3: sumar un punt a totes les notes sense superar el 
-''' 
+```Python 
 for persona in llista_final: 
   nova_nota = persona [1]+1
   if nova_nota > 10:
     nova_nota = 10 nova_persona = (persona[0], nova_nota) 
 print(nova_persona) 
-'''
+```
 
 Tasca 4: Afegir un tercer element dins la tupla:
 
@@ -74,7 +79,7 @@ Si la nota es igual o superior a 7, añadir el texto "notable".
 Si la nota supera el 9, añadir el texto "Excelente".
 Si la nota equivale a un 10, añadir el texto "matrícula de honor".
 
-'''
+```Python
 llista_definitiva =[] 
 
 for persona in llista_final:
@@ -101,11 +106,11 @@ print(llista_definitiva)
 df = pd.DataFrame(llista_definitiva)
 
 df.to_csv(dataset.csv)
-'''
+```
 El que fem amb df, és convertir el resultat que imprimeix per pantalla en un csv.
 
 Tasca 5: Transforma la llista de tuplas en un dataset
-'''
+```Python
 import json
 import pandas as pd
 
@@ -128,9 +133,9 @@ for d in data:
   print(df)
 
 df.to_csv("temperatures.csv", index=False, decimal=",")
-'''
+```
 
 Calcular la temperatura màxima
-'''
+```Python
 df = pd.DataFrame(llista_dades, columns=["temp", "pres", "data"]) print(df) max = df["temp"].idxmax() print(df.iloc[[max]])
-'''
+```
