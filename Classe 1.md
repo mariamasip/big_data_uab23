@@ -31,7 +31,7 @@ A continuació, convertim  la variable Likes en una cadena de text:
 frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
 print(frase_final)
 ```
-Les variables se sobreescriuen, es a dir, pots donar un valor nou a una mateixa variable definida anteriorent.
+Les variables se **sobreescriuen**, es a dir, pots donar un valor nou a una mateixa variable definida anteriorent.
 ```Python
 var3= 1
 var4=2
@@ -59,7 +59,7 @@ nom_complert =[llista_noms, cognoms]
 print(nom_complert)
 ```
 
-######Loops
+###### Loops
 **for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
 
 En aquest exemple, imprimim noms per separat ('for' / per cada cosa a la llista 'in noms').
