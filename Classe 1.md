@@ -1,5 +1,5 @@
 ##Classe 1: Cadenes, números, variables, llistes, i el bucle for.
-
+## 0- Elementos básicos
 **Les cadenes:** llistes de caràcters que es poden emmagatzemar a la memòria de l'ordinador que utilitzeu.
 ```Python
 "això és una cadena"
