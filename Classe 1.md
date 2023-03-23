@@ -70,18 +70,18 @@ Recorre dins la llista els elements.
 
 
 Una altra manera d'escriure el codi es el següent:
-'''
+```
 for nom in llista_noms:
 print(f"En {nom} no ha vingut")
-'''
+```
 
 **Exercici Llista**
-'''
+```
 numeros = [1,2,3,4,10]
 afegit = 2
 
 for num in numeros:
     print(num + afegit)
-'''
+```
 El que hem fet en aquest exercici és definir una llista de números i una variable que és = 2. Amb el 'for' el que fem és que a cada element que tenim a la llista l'imprimim i i sumem 2(de la variable 'afegit').
 
