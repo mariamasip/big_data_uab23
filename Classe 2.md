@@ -1,5 +1,6 @@
-##classe 2
+## classe 2
 
+### llista.append
 **Afegir noms a una llista** Amb 'llista.append' podem sumar elements d'una llista en una altra.
 '''
 llista = ["jaume", "carme"]
