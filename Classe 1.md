@@ -8,11 +8,13 @@
 'Això "és" una cadena'
 ```
 **Números** 'int' – enteros, 'float' – con decimales, 'complex' – complejos
+```Python
 1 (int)
 1.3 (float)
+```
 
 **Variables:** són "etiquetes" que permeten fer referència a les dades.
-```
+```Python
 var = 1
 print(var)
 
@@ -20,18 +22,18 @@ var2 = 1+4
 print(var2)
 ```
 Exemple de de 'print' les variables Usuari i Likes:
-```
+```Python
 usuari = "Ibai Llanos"
 likes = 100
 print("L'usuari", usuari, "té", likes, "likes")
 ```
 A continuació, convertim  la variable Likes en una cadena de text:
-```
+```Python
 frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
 print(frase_final)
 ```
 Les variables se sobreescriuen, es a dir, pots donar un valor nou a una mateixa variable definida anteriorent.
-```
+```Python
 var3= 1
 var4=2
 resultat = var3 + var4
@@ -43,7 +45,7 @@ En aquest exemple anterior, la variable 'var4' canviarà de valor de 2 a 4.
 
 
 **Llistes d'items** per desar col·leccions de dades.
-```
+```Python
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
 print(llista_noms)
@@ -51,7 +53,7 @@ print(llista_noms)
 
 
 També es poden fer llistes de variables:
-```
+```Python
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
 nom_complert =[llista_noms, cognoms]
@@ -62,7 +64,7 @@ print(nom_complert)
 **for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
 
 En aquest exemple, imprimim noms per separat ('for' / per cada cosa a la llista 'in noms').
-```
+```Python
 for nom in llista_noms:
     print("en", nom, "no ha vingut")
 ```
@@ -70,13 +72,13 @@ Recorre dins la llista els elements.
 
 
 Una altra manera d'escriure el codi es el següent:
-```
+```Python
 for nom in llista_noms:
 print(f"En {nom} no ha vingut")
 ```
 
 **Exercici Llista**
-```
+```Python
 numeros = [1,2,3,4,10]
 afegit = 2
 
