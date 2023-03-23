@@ -30,42 +30,42 @@ A continuació, convertim  la variable Likes en una cadena de text:
 frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
 print(frase_final)
 ```
-
-
 Les variables se sobreescriuen, es a dir, pots donar un valor nou a una mateixa variable definida anteriorent.
-'''
+```
 var3= 1
 var4=2
 resultat = var3 + var4
 var5= 4
 resultat = var3 + var4 + var5
 print(resultat)
-'''
+```
 En aquest exemple anterior, la variable 'var4' canviarà de valor de 2 a 4.
 
 
 **Llistes d'items** per desar col·leccions de dades.
-'''
+```
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
 print(llista_noms)
-'''
+```
+
 
 També es poden fer llistes de variables:
-'''
+```
 llista_noms = ["Pere", "Carme", "Joan"]
 congnoms = ["Fernandez", "Padilla", "Huguet"]
 nom_complert =[llista_noms, cognoms]
 print(nom_complert)
-'''
-######Loopss
+```
+
+######Loops
 **for** per recórrer els elements d'un objecte iterable (llista, tupla, conjunt, diccionari, ...) i executar un bloc de codi.
 
 En aquest exemple, imprimim noms per separat ('for' / per cada cosa a la llista 'in noms').
-'''
+```
 for nom in llista_noms:
     print("en", nom, "no ha vingut")
-'''
+```
 Recorre dins la llista els elements.
 
 
