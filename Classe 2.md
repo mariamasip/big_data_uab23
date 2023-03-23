@@ -2,34 +2,34 @@
 
 ### llista.append
 **Afegir noms a una llista** Amb 'llista.append' podem sumar elements d'una llista en una altra.
-'''
+```Python
 llista = ["jaume", "carme"]
 llista2= ["raquel", "maria"]
 
 llista.append(llista2)
 print(llista)
-'''
+```
 
 
 Imprimir una llista amb els nom separats, a través del bucle 'for'.
-'''
+```Python
 llista_noms= ["carme", "Joan"]
 
 for nom in llista_noms:
     print(nom)
-'''
+```
 
 
 Imprimir un dels noms de la llista, utilitzen '==' que significa que si el nom és igual a 'Joan', imprimeixi el nom en pantalla.
-'''
+```Python
 for nom in llista_noms:
     if nom == "joan":
         print(nom)
-'''
+```
 
 
 **Else** va després de 'if' en cas que no compleixi la condició de l'if' aquesta saltarà a 'else'. 
-'''
+```Python
 llista_noms =["carme", "Joan"]
 
 for nom in llista_noms:
@@ -37,12 +37,12 @@ for nom in llista_noms:
         print(nom)
     else:
         print(nom + "no es en joan")
- '''
+```
  Com que el nom no és igual '==' a Joan, imprimeix per pantalla: X no es Joan.
  
         
  **Elif** Són condicionals else encadenats.
- '''  
+```Python
 numeros =[1,2,3,6,7,8,10,15]
 
 for n in numeros:
@@ -52,12 +52,12 @@ for n in numeros:
         print(f"{n}es igual que 6")
     else:
         print(f"{n} es major que 6")
-'''
+```
 Si el número de la llista és més petit '<' que 6, s'imprimirà: X es menor que 6. Si és igual '==' que 6, s'imprimirà: X és igual que 6. Si és major '>' que 6, s'imprimirà: X és major que 6.
 
 
 **len** retorna la longitud d'un objecte, ja sigui una llista, cadena, tupla o diccionari.
-'''
+```Python
 numeros =[1,2,3,6,7,8,10,15]
 print(len(numeros)
 
@@ -66,13 +66,13 @@ numeros =[1,2,3,6,7,8,10,15]
 print(len(numeros)
 llargaria = len(numeros)
 print(llargaria)
-'''
+```
 
 
 ######Exercicis bàsics
 
 **Exercici A**
-'''
+```Python
 frase = "esto es un ejercicio"
 print(frase)
 
@@ -82,11 +82,11 @@ frase2=(f"en la assignatura {classe} he obtingut un {nota}")
 nota = 10
 frase2=(f"en la assignatura {classe} he obtingut un {nota}")
 print (frase2)
-'''
+```
 
 
 **Exercici B**
-'''
+```Python
 notas = ["5","7","6","4"]
 alumnos = ["jaume","carla","pere","adrià","rafael","agnès"]
 nota_numerica = int(nota)
@@ -94,10 +94,10 @@ print (nota_numerica + 1)
 
 for nota in notas:
     print (nota_numerica+1)
-'''
+```
     
 part 2 de l'exercici:
-'''  
+```  
 for nota in notas:
 print (nota_numerica+1)
 
@@ -105,12 +105,12 @@ for nota, nom in zip(notas, alumnos):
     nota_numerica =int(nota)
     nota_final = nota_numerica+1
     print(nota_final, nom)
-'''
+```
 En aquesta segona part, s'imprimeix el noms + la nota
 
 
 esta el nom a la llista?    
-'''
+```Python
 lista = ["adria", "carla", "joan", "pere"]
 
 nom = "joan"
@@ -120,11 +120,11 @@ if nom in lista:
     print ("Sí")
 else:
     print("no")
-'''
+```
 
     
 **index** aquesta funció ens permet obtenir l'índex o la posició de la primera aparició d'un element dins d'una llista.
-'''
+```Python
 lista = ["adria", "carla", "joan", "pere"]
 
 nom = "joan"
@@ -136,31 +136,31 @@ if nom in lista:
     print(position)
 else:
     print("no")
-'''
+```
 És el mateix que en l'exercici anterior però utilitzant la funció index de manera més eficient.
 
 **set**és una col·lecció d'elements desordenats que no admet duplicats.
-'''
+```Python
 lista = ["adria", "carla", "joan", "pere", "pere"]
 
 valors_unics = set(lista)
 
 print(valors_unics)
 print(len(valors_unics))
-'''
+```
 Per saber quans alumnes, sense contar els duplicats, dins una llista.
 
 Exercici 1
 a)
-'''
+```Python
 llista = [ "david", "dani", "marta", "jaume", "adria", "carla", "joan", "pere", "carla", "pere", "adria", "quico", "pere", "joan", "agustí", "adria", "joan", "adria", "siscu", "carles", "dani", "carla"]
 llista_unics = set(llista)
 print(f"Han vingut {len(llista_unics)} alumnes")
-'''
+```
 
 Exercici 2
 b)
-'''
+```Python
 llista = [ "david", "dani", "marta", "jaume", "adria", "carla", "joan", "pere", "carla", "pere", "adria", "quico", "pere", "joan", "agustí", "adria", "joan", "adria", "siscu", "carles", "dani", "carla"]
 
 llista_unics = set(llista)
@@ -177,11 +177,10 @@ for nom in llista_unics:
     if valor > 1:
         llista_repetits.append(nom)
     print(f"Han repetit {len(llista_repetits)} alumnes")
-
-'''
+```
 
 Utilitzant el contador
-'''
+```Python
 llista_repetits=[]
 contador = 0
 for nom in llista_unics:
@@ -192,31 +191,31 @@ for nom in llista_unics:
 
 print(f"Han repetit {len(llista_repetits)} alumnes")
 print(contador)
-'''
+```
 
 Exercici 2 
 c)
-'''
+```Python
 percentatge = (contador/len(llista_unics)) * 100
 print (f"El percentatge d'assistència és del {percentatge} %")
-'''
+```
 L'equació de % =  x/y * 100
 
 Exercici 3
 a)
-'''
+```Python
 notes = ["5","3","7","8","9.5","4","6,2"]
 alumnes = ["adria","agnès","josep","rafa","cristina","Gemma","Eduard"]
-'''
+```
 
 Part a) imprimir les ntes per cada alumne
-'''
+```Python
 for nota, alumne in zip(notes, alumnes):
     print(nota, alumne)
-'''
+```
 
 Part b) Calcular la nota promig
-'''
+```Python
 notes_arreglades = []
 for nota, alumne in zip(notes, alumnes):
     print(nota_final, nom)
@@ -236,23 +235,23 @@ for nota, alumne in zip(notes, alumnes):
 
     print(notes_arreglades)
     print(round(sum(notes_arreglades)/len(notes_arreglades))
-'''
+```
           
 Calcula i imprimeix la nota més alta amb l'alumne
-'''
+```Python
 nota_maxima = max(notes_arreglades)
 posicio = notes_arreglades.index(nota_maxima)
 print(nota_maxima, posicio)
 print(f"La màxima és un {nota_maxima}, i l'ha obtingut {alumnes[posicio]}")
-'''
+```
 
 Imprineix la nota mínima
-'''
+```Python
 nota_minima = min(notes_arreglades)
 posicio = notes_arreglades.index(nota_minima)
 print(nota_minima, posicio)
 print(f"La màxima és un {nota_minima}, i l'ha obtingut {alumnes[posicio]}")
-'''
+```
 
     
 
