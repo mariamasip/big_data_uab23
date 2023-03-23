@@ -20,17 +20,17 @@ var2 = 1+4
 print(var2)
 ```
 Exemple de de 'print' les variables Usuari i Likes:
-'''
+```
 usuari = "Ibai Llanos"
 likes = 100
 print("L'usuari", usuari, "té", likes, "likes")
-'''
-
+```
 A continuació, convertim  la variable Likes en una cadena de text:
-'''
-#frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
-#print(frase_final)
-'''
+```
+frase_final = "L'usuari", +usuari+, "té",+ str(likes)+, "likes"
+print(frase_final)
+```
+
 
 Les variables se sobreescriuen, es a dir, pots donar un valor nou a una mateixa variable definida anteriorent.
 '''
