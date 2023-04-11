@@ -7,8 +7,8 @@ import json
 import time
 import pandas as pd
 
-SPOTIPY_CLIENT_ID='31b9a9b794794664a637c9f2965e0383'
-SPOTIPY_CLIENT_SECRET='17bcb8109c3242e7989e8d1053dcbc0f'
+SPOTIPY_CLIENT_ID='-'
+SPOTIPY_CLIENT_SECRET='-'
 
 
 auth_manager = SpotifyClientCredentials(SPOTIPY_CLIENT_ID,SPOTIPY_CLIENT_SECRET)
