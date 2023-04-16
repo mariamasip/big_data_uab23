@@ -39,7 +39,7 @@ Ara que sabem quines són les categories amb més impacte, fa falta veure quins 
 
 Per sota també trobem el famós streamer, Ibai Llanos, que ha acumulat 75 hores de directe i més de 29 milions de viewers. Seguit per IlloJuan, que ha superat les 123 hores de vídeo en temps real i més de 24 milions d’espectadors.
 
-El que em crida l’atenció en aquest gràfic, però, és que en general, els streamers amb menys espectadors, les hores de directe són més altes, que els grans streamers. Sent així el cas d'OscarFilms, que arriba fins a les 613 hores al mes amb 711.667 viewers, comparat amb El Spreen, que ha fet poc més de 56 hores, aconsegueix una xifra desorbitada de més de 19 milions. Per tant, és el cas de molts streamers que han de fer moltes més hores de directe per a aconseguir una retribució econòmica.
+El que em crida l’atenció en aquest gràfic, però, és que en general, els streamers amb menys espectadors, les hores de directe són més altes a diferencia dels grans streamers. Sent així el cas d'OscarFilms, que arriba fins a les 613 hores al mes amb 711.667 viewers, comparat amb El Spreen, que ha fet poc més de 56 hores, aconsegueix una xifra desorbitada de més de 19 milions. Per tant, és el cas de molts streamers que han de fer moltes més hores de directe per a aconseguir una retribució econòmica.
 
 <img width="419" alt="image" src="https://user-images.githubusercontent.com/125387521/232328794-2e4feea5-e378-4a7b-92ba-ca7b1ed329b0.png"><img width="103" alt="image" src="https://user-images.githubusercontent.com/125387521/232328995-7feefcec-2767-4c36-8150-c6d53a59c24c.png">
 Gràfic 5
