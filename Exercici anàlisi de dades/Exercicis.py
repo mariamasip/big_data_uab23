@@ -56,23 +56,22 @@ final_frame_2.to_csv("3.csv")#Generem un nou dataframe
 
 #4.¿Cuál es la distribución de los streamers si los clasificamos por volumenes de audiencia y horas realizadas?
 
-list_audiencia = [] #Creem dues llistes buides
+list_aud= [] #Creem dues llistes buides
 list_hores = []
 
 df = pd.read_csv("feb_23_es_simple.csv", chunksize=1000000, sep="\t", usecols=["streamer_name","game_name", "viewer_count"])
 
-
 for chunk in df:
-    df_audiencia = chunk.groupby('streamer_name')['viewer_count'].sum().reset_index()#es crea un dataframe que agrega els viewers per cada "streamer_name" i els suma
+    df_aud = chunk.groupby('streamer_name')['viewer_count'].sum().reset_index()#es crea un dataframe que agrega els viewers per cada "streamer_name" i els suma
     df_hores = chunk.groupby('streamer_name').size().transform(lambda x: x*0.25).reset_index(name='hores')#es crea un dataframe que agrega les hores d'streaming i es multiplica per 0.25 per convertir les línies de dades en hores
     print(chunk)
 
-    list_audiencia.append(df_audiencia)
+    list_audiencia.append(df_aud)
     list_hores.append(df_hores)
 
-df_audiencia_final = pd.concat(list_audiencia).groupby('streamer_name')['viewer_count'].sum().reset_index() #es crea un dataframe final
+df_aud_final = pd.concat(list_aud).groupby('streamer_name')['viewer_count'].sum().reset_index() #es crea un dataframe final
 df_hores_final = pd.concat(list_hores).groupby('streamer_name')['hores'].sum().reset_index()
-df_final = df_audiencia_final.merge(df_hores_final)#fusiona les dades dels dataframes "df_audiencia_final" i "df_hores_final"
+df_final = df_aud_final.merge(df_hores_final)#fusiona les dades dels dataframes "df_aud_final" i "df_hores_final"
 
 df_final.to_csv('4.csv', decimal=",") #crea el csv i canvia la separació dels decimals per comes
 
@@ -81,4 +80,4 @@ df = pd.read_csv('feb_23_es_simple.csv',sep="\t")
 
 df_sum = df.groupby(['captured_at'])['viewer_count'].std().reset_index() #s'agrupa la columna 'captured_at' del dataframe 'df' i s'aplica la funció 'std()'
 
-df_sum.to_csv('5prova1.csv', decimal=',', index=False)#es crea el csv 
+df_sum.to_csv('5.csv', decimal=',', index=False)#es crea el csv 
