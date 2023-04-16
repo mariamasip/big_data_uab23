@@ -11,7 +11,7 @@ En l’interval de temps del mes de febrer, podem començar a identificar compor
 <img width="898" alt="image" src="https://user-images.githubusercontent.com/125387521/232328484-203aff04-feea-45bc-9258-621d50733562.png">
 Gràfic 1
 
-A partir d’aquestes mateixes dades, i responent a la mateixa pregunta, podem comprovar el comportament cíclic de la plataforma a través de les hores. Posant com a exemple, el dia 9, comença la jornada al cim del pic, a la 1h amb 1.937.158 espectadors, que augmenta fins a 1.982.260 i cau en picat a les 4h fins a les 11h que assoleix el seu mínim amb 219.879 viewers. Tot seguit, de 15h a 20h creix exponencialment i de 20h a 3h de la matinada, es repeteix el pic i l’endemà es renova el cicle. L’explicació més fàcil a aquest fet, és la trobada entre dues audiències hispanoparlants i en conseqüència caldrà confirmar en següents preguntes, l’augment també de canals emetent en directe.
+A partir d’aquestes mateixes dades, i responent a la mateixa pregunta, podem comprovar el comportament cíclic de la plataforma a través de les hores. Posant com a exemple, el dia 9, comença la jornada al cim del pic, a la 1h amb 1.937.158 espectadors, que augmenta fins a 1.982.260 i cau en picat a les 4h fins a les 11h que assoleix el seu mínim amb 219.879 viewers. Tot seguit, de 15h a 20h creix exponencialment i de 20h a 3h de la matinada, es repeteix el pic i l’endemà es renova el cicle. L’explicació més fàcil a aquest fet, és la trobada entre dues audiències hispanoparlants i en conseqüència caldrà confirmar en següents preguntes, l’augment també de canals emetent en directe en aquesta franja.
 
 <img width="901" alt="image" src="https://user-images.githubusercontent.com/125387521/232328541-6793554e-b9fc-44a9-82fe-7f1b2cb8be2c.png">    
 Gràfic 2
