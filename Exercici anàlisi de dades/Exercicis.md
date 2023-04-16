@@ -1,6 +1,6 @@
-# Anàlisis de l'audiència de Twitch
+# Anàlisi de l'audiència de Twitch
 ### Febrer 2023
-El propòsit d’aquest anàlisis és analitzar i extraure conclusions de dades objectives tretes de l’API de Twitch, per examinar el comportament dels seus usuaris, des de l’streamer fins a l’audiència, donant resposta a cinc preguntes.
+El propòsit d’aquest anàlisi és analitzar i extraure conclusions de dades objectives tretes de l’API de Twitch, per examinar el comportament dels seus usuaris, des de l’streamer fins a l’audiència, donant resposta a cinc preguntes.
 
 En aquest moment, redactant aquest article, 1.519.070 persones es troben consumint continguts de la plataforma repartits en els 69.949 canals que estan emetent en directe en aquest instant, segons indica twitchtracker.com. Així doncs, serà interessant analitzar com es repeteix aquesta audiència en un període de temps concret, per entendre com funciona a llarg plaç.
 
