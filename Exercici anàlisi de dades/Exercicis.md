@@ -1,4 +1,4 @@
-# Anàlisi de l'audiència de Twitch
+# Anàlisis de l'audiència de Twitch
 ### Febrer 2023
 El propòsit d’aquest anàlisis és analitzar i extraure conclusions de dades objectives tretes de l’API de Twitch, per examinar el comportament dels seus usuaris, des de l’streamer fins a l’audiència, donant resposta cinc preguntes.
 
