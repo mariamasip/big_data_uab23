@@ -56,7 +56,7 @@ En últim lloc, és interessant saber i analitzar la desviació d’aquesta audi
 <img width="877" alt="image" src="https://user-images.githubusercontent.com/125387521/232329114-8b920ee1-cb8b-4324-9ee2-e4ada0d2c8e4.png">          
 Gràfic 7
 
-<img width="713" alt="image" src="https://user-images.githubusercontent.com/125387521/232329571-595d795d-6674-4847-adde-0e54c702710b.png">
+<img width="708" alt="image" src="https://user-images.githubusercontent.com/125387521/232329620-29cdd415-ab0d-4272-bbc7-faee72ff9892.png">
 Gràfic 8
 
 
