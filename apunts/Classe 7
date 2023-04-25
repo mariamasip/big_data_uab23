@@ -1,0 +1,19 @@
+import pandas as pd
+import glob
+
+datasets = glob.glop("datasets/twitch_*") #per obrir tots els arxius que començin per dataset/twitch
+
+llista=[]
+llista_streamers = ["auronplay", "IlloJuan"]#keysensitive
+
+for data in datasets:
+    df = pd.read_scv(data, sep="/t") #per a fer dos dataframes de dos streamers separats
+        for streamers in llista_streamers:
+            df_2 = df[df['streamer_name'] == "streamer"]
+            llista.append(df_2)
+            print(df_2)
+
+
+df_final = pd.concat(llista)
+df_final.to_csv(f"{streamer}-dataset.csv", index=False)
+
