@@ -2,26 +2,21 @@ import pandas as pd
 import json
 import glob
 
-# per obrir tots els arxius JSON dins del directori "api_responses/"
-files = glob.glob('api_responses/*.json')
+files = glob.glob('api_responses/*.json')#per obrir tots els arxius JSON dins del directori "api_responses/"
 
-# Creem una llista buida per a emmagatzemar els marcs de dades
-llista_dfs = []
+llista_dfs = [] # creem una llista buida per a emmagatzemar els marcs de dades
 
-# Recorrem cada arxiu JSON
-for file in files:
+for file in files:# Recorrem cada arxiu JSON
     # Obrim l'arxiu JSON
     with open(file, encoding="utf-8") as jsonfiles:
         # Carrega les dades JSON
         dades = json.load(jsonfiles)
 
-        # Obtenim els tuits de l'arxiu JSON
-        tweets = dades["data"]
+        tweets = dades["data"] #obtenim els tuits de l'arxiu JSON 
         print(len(tweets))
 
-        # Recorrem cada tuit
-        for tweet in tweets:
-            # Obtenim les dades del tuit que ens interessen
+        for tweet in tweets: #Recorrem cada tuit
+            #obtenim les dades del tuit que ens interessen
             author_id = tweet["author_id"]
             text = tweet["text"]
             created_at = tweet["created_at"]
@@ -33,22 +28,19 @@ for file in files:
             impression_count = tweet["public_metrics"]["impression_count"]
             lang = tweet["lang"]
 
-            # Obté la llista d'usuaris de l'arxiu JSON
+            # Obtenim la llista d'usuaris de l'arxiu JSON
             users = dades["includes"]["users"]
-            # Per a cada usuari de la llista d'usuaris
-            for user in users:
+            for user in users: # Per a cada usuari de la llista d'usuaris
                 # Si la ID de l'usuari coincideix amb la ID de l'autor del tuit actual
                 if user["id"] == author_id:
-                    # Guarda el nom d'usuari de l'autor i el nombre de seguidors
-                    user_name = user["username"]
+                    user_name = user["username"] # Guarda el nom d'usuari de l'autor i el nombre de seguidors
                     print(user["id"], user["username"])
                     followers = user["public_metrics"]["followers_count"]
                 # Si la ID de l'usuari no coincideix amb la ID de l'autor del tuit actual, passa a l'usuari següent
                 else:
                     pass
-
-            # Creem un nou dataframe de dades per al tuit
-            df = pd.DataFrame({
+                
+            df = pd.DataFrame({ #creem un nou dataframe de dades per al tuit
                 "user_id": author_id,
                 "user_name": user_name,
                 "followers": followers,
@@ -64,11 +56,9 @@ for file in files:
             }, index=[0])
 
             print(df)
-            # Afegim el marc de dades a la llista
-            llista_dfs.append(df)
+          
+            llista_dfs.append(df)   #afegim el dataframe a la llista
 
-# Concatenem el dataframe amb les dades
-df_final = pd.concat(llista_dfs)
+df_final = pd.concat(llista_dfs) # Concatenem el dataframe amb les dades
 
-# Guardem el dataframe final en un fitxer CSV que s'anomena final_tableau.csv
-df_final.to_csv("final_tableau.csv")
+df_final.to_csv("final_tableau.csv") # Guardem el dataframe final en un fitxer CSV que s'anomena final_tableau.csv
