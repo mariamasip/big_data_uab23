@@ -1,3 +1,4 @@
+```Python
 # pip install transformers
 # pip install torch
 # Raw Data --> TOKENIZERS --> Models --> Outputs
@@ -13,8 +14,10 @@ print(result)
 pipe = pipeline("translation", model="Helsinki-NLP/opus-mt-en-ca") #a vegades fa falta el tokenizer
 result = pipe("Maria wants to kill Àlex")
 print(result)
+```
 
-Arxiu 2
+## Arxiu 2
+```Python
 # DEPENDENCIAS
 # pip install tqdm
 # pip install pandas
@@ -27,8 +30,8 @@ Arxiu 2
 # https://huggingface.co/jorgeortizfuentes/spanish_hate_speech
 # https://huggingface.co/francisco-perez-sorrosal/distilbert-base-uncased-finetuned-with-spanish-tweets-clf
 #####
-
-
+```
+```Python
 import glob
 from tqdm import tqdm
 import pandas as pd
@@ -80,3 +83,4 @@ for d in datasets[1:]:
     print(dataset_madre)
 
 dataset_madre.to_csv(f"final-{dataset}")
+```
