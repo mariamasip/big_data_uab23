@@ -1,5 +1,5 @@
-Api Spotify
-
+## Api Spotify
+```Python
 #https://developer.spotify.com/documentation/web-api/reference/#/operations/get-playlists-tracks
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -57,7 +57,8 @@ for i in query["items"]: #el nom està dins d'artist, track i englobat per items
 
 df = pd.DataFrame.from_records(relacions, columns=['source', 'target'])
 df.to_csv('dataset.csv', index=False)
-
+```
+```Python
 
 DOCUMENT JSON (EXEMPLE 1 ARTISTA)
 "href": "https://api.spotify.com/v1/playlists/3oopyXIZGLFtHjFYN9KbuI/tracks?offset=0&limit=100&additional_types=track%2Cepisode",
@@ -122,3 +123,4 @@ DOCUMENT JSON (EXEMPLE 1 ARTISTA)
                     "type": "album",
                     "uri": "spotify:album:0U9LMMfkDK3alar1KZ7JEX"
                 },
+```
