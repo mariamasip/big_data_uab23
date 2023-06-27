@@ -1,4 +1,4 @@
-**Exercici Casa** Pandas
+## Exercici Casa Pandas
 
 import pandas as pd
 import csv
@@ -76,7 +76,7 @@ print(df_1)
 
 ////
 
-**Importar csv de 4G**
+## Importar csv de 4G
 
 import pandas as pd
 import time
@@ -101,7 +101,8 @@ dades_kings_leage.to_csv("kingsleague.csv", index=False)
 final = time.time() #el temps que tarda en fer el pprocés
 print(final-inici)
 
-**El mateix amb molts menys recursos; chunks.**
+## El mateix amb molts menys recursos; chunks.
+
 import pandas as pd
 import time
 
