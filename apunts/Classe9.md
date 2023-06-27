@@ -1,3 +1,4 @@
+```Python
 #pip install beautifulsoup4
 #pip insgtall requests
 #pip install spotipy
@@ -31,7 +32,8 @@ for any in anys:
 
 final = pd.concat(llista_dataframes)
 #final.to_excel("llista_final.xlsx", index=False)
-"""
+```
+```Python
 df = pd.read_excel("llista_final.xlsx")
 
 SPOTIPY_CLIENT_ID = "437c8ad79c904d3ba854ad5f29fc285f"
@@ -51,3 +53,4 @@ for index, row in df.iterrows():
     q = f"{artista}{p_track}"
     info = sp.search(q, limit =10, offset=0, type='track', market=None)
     print(info)
+```
