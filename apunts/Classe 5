@@ -13,7 +13,7 @@ print(data.shape) #total de files i columnes ( 19128 files i 25 columnes)
 print (data.head()) #imprimeix linies del csv
 
 for col in data.columns:
-    print(col) #imprimerix totes les columnes (25 columnes)
+    print(col) #imprimerix totes les columnes (25 columnes).
 
 print(data['viewCount']) #impirmeix la columna viewCount (nan al csv)
 
