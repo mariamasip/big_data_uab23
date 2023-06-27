@@ -1,5 +1,5 @@
 ## Exercici Casa Pandas
-,,,
+```Python
 import pandas as pd
 import csv
 import pandas
@@ -73,10 +73,11 @@ df_1["desviacio"] = list_desviacio
 print(df_1)
 #df_1.to_csv("exemple.csv")
 
+```
 
-////
 
 ## Importar csv de 4G
+```Python
 
 import pandas as pd
 import time
@@ -100,9 +101,9 @@ dades_kings_leage.to_csv("kingsleague.csv", index=False)
 #concepte: granularitat de les dades
 final = time.time() #el temps que tarda en fer el pprocés
 print(final-inici)
-
+```
 ## El mateix amb molts menys recursos; chunks.
-
+```Python
 import pandas as pd
 import time
 
@@ -129,7 +130,7 @@ dades_kings_leage.to_csv("kingsleague.csv", index=False)
 #concepte: granularitat de les dades
 final = time.time() #el temps que tarda en fer el pprocés
 print(final-inici)
-
+```
 
 
 
